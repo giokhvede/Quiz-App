@@ -58,6 +58,9 @@ body {
   color: #fff;
 }
 
+.btn:disabled {
+  cursor: no-drop;
+}
 
 #next-btn {
   background-color: #001e4d;
