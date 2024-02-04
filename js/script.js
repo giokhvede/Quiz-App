@@ -76,4 +76,21 @@ function resetQuestions() {
   }
 }
 
+function selectAnswer() {
+  const selectedBtn = e.target;
+  const isCorrect = selectedBtn.dataset.correct === "true";
+  if (isCorrect) {
+    selectedBtn.classList.add("correct");
+    score++;
+  } else {
+    selectedBtn.classList.add("inCorrect");
+  }
+  Array.from(answersElement.children).forEach((button) => {
+    if (button.dataset.correct === "true") {
+      button.classList.add("correct");
+    }
+    button.disabled = true;
+  });
+}
+
 startQuiz();
