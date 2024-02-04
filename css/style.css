@@ -3,3 +3,68 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #001e4d;
+}
+
+.app {
+  background-color: #fff;
+  color: #001e4d;
+  margin: 80px auto 0;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 10px;
+  padding: 30px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.app h1 {
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quiz h2 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn {
+  background-color: #fff;
+  color: #001e4d;
+  font-size: 12px;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #001e4d;
+  color: #fff;
+}
+
+#next-btn {
+  background-color: #001e4d;
+  color: #fff;
+  width: 150px;
+  align-self: center;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
