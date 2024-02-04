@@ -70,6 +70,7 @@ function showQuestions() {
 }
 
 function resetQuestions() {
+  nextBtn.style.display = "none";
   while (answersElement.firstChild) {
     answersElement.removeChild(answersElement.firstChild);
   }
