@@ -40,3 +40,31 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answersElement = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  nextBtn.innerHTML = "Next";
+  showQuestions();
+}
+
+function showQuestions() {
+  let currentQuestion = questions[currentQuestionIndex];
+  let currentQuestionNumber = currentQuestionIndex + 1;
+  questionElement.innerHTML =
+    currentQuestionNumber + ". " + currentQuestion.question;
+  currentQuestion.answers.forEach((answer) => {
+    const btn = document.createElement("button");
+    btn.innerHTML = answer.text;
+    btn.classList.add("btn");
+    answersElement.appendChild(btn);
+    if (answer.correct) {
+      btn.dataset.correct = answer.correct;
+    }
+  });
+}
+
+startQuiz();
