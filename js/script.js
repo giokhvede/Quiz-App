@@ -52,6 +52,7 @@ function startQuiz() {
 }
 
 function showQuestions() {
+  resetQuestions();
   let currentQuestion = questions[currentQuestionIndex];
   let currentQuestionNumber = currentQuestionIndex + 1;
   questionElement.innerHTML =
@@ -65,6 +66,12 @@ function showQuestions() {
       btn.dataset.correct = answer.correct;
     }
   });
+}
+
+function resetQuestions() {
+  while (answersElement.firstChild) {
+    answersElement.removeChild(answersElement.firstChild);
+  }
 }
 
 startQuiz();
