@@ -94,4 +94,26 @@ function selectAnswer(e) {
   nextBtn.style.display = "block";
 }
 
+nextBtn.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length) {
+    handleNextBtn();
+  } else {
+    startQuiz();
+  }
+});
+
+function handleNextBtn() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestions();
+  } else {
+    showScore();
+  }
+}
+
+function showScore() {
+  resetQuestions();
+  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+}
+
 startQuiz();
