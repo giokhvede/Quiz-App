@@ -53,10 +53,11 @@ body {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover{
   background-color: #001e4d;
   color: #fff;
 }
+
 
 #next-btn {
   background-color: #001e4d;
@@ -67,4 +68,12 @@ body {
   border-radius: 4px;
   cursor: pointer;
   display: none;
+}
+
+.correct {
+  background-color: #9aeabc;
+}
+
+.inCorrect {
+  background-color: #ff9393;
 }
