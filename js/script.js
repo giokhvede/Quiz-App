@@ -91,6 +91,7 @@ function selectAnswer() {
     }
     button.disabled = true;
   });
+  nextBtn.style.display = "block";
 }
 
 startQuiz();
