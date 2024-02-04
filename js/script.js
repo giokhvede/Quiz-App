@@ -114,6 +114,8 @@ function handleNextBtn() {
 function showScore() {
   resetQuestions();
   questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+  nextBtn.innerHTML = "Play Again";
+  nextBtn.style.display = "block";
 }
 
 startQuiz();
