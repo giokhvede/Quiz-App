@@ -65,6 +65,7 @@ function showQuestions() {
     if (answer.correct) {
       btn.dataset.correct = answer.correct;
     }
+    btn.addEventListener("click", selectAnswer);
   });
 }
 
